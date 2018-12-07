@@ -155,10 +155,6 @@ namespace ADVENTure
 					{
 						localthrees++;
 					}
-					//if (localthrees > 0 && localthrees > 0)
-					//{
-					//	break;
-					//}
 				}
 				//Console.WriteLine($"Twos: {localtwos}, Threes: {localthrees}");
 
