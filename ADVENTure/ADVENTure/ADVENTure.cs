@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,13 +11,13 @@ namespace ADVENTure
 	{
 		public static void Main(string[] args)
 		{
-			day1p2();
+			day2p1();
 			Console.ReadLine();
 		}
 
 		public static void day1p1()
 		{
-			string[] lines = File.ReadAllLines("day1.txt");
+			string[] lines = File.ReadAllLines("input/day1.txt");
 			int runningCount = 0;
 			foreach (string line in lines)
 			{
@@ -57,7 +57,7 @@ namespace ADVENTure
 
 		public static void day1p2()
 		{
-			string[] lines = File.ReadAllLines("day1.txt");
+			string[] lines = File.ReadAllLines("input/day1.txt");
 			int runningCount = 0;
 			List<int> list = new List<int>();
 			bool duplicateFound = false;
