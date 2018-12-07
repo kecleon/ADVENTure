@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace ADVENTure
 	{
 		public static void Main(string[] args)
 		{
-			day2p1();
+			day2p2();
 			Console.ReadLine();
 		}
 
@@ -98,19 +98,19 @@ namespace ADVENTure
 
 					if (list.Contains(runningCount))
 					{
-						Console.WriteLine($"First repeat: {runningCount},");
+						Console.WriteLine($"First repeat: {runningCount}");
 						duplicateFound = true;
 						break;
 					}
 					list.Add(runningCount);
 				}
-				//Console.WriteLine("Result: " + runningCount);
+				Console.WriteLine("Result: " + runningCount);
 			} while (!duplicateFound);
 		}
 
 		public static void day2p1()
 		{
-			string[] lines = File.ReadAllLines("input/day2.txt");
+			string[] lines = File.ReadAllLines("input/day2p1.txt");
 			long checksum = 0;
 
 			List<Dictionary<char, int>> LineCharCountList = new List<Dictionary<char, int>>();
