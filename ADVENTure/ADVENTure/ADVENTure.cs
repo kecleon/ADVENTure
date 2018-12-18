@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -171,6 +171,38 @@ namespace ADVENTure
 			checksum = twos * threes;
 			Console.WriteLine($"ALL Twos: {twos}, Threes: {threes}");
 			Console.WriteLine("Result: " + checksum);
+		}
+
+		public static void day2p2()
+		{
+			string[] lines = File.ReadAllLines("input/day2p1.txt");
+
+			Dictionary<string, int> counts = new Dictionary<string, int>();
+
+			for (int a = 0; a < lines.Length; a++)
+			{
+				for (int b = 0; b < lines.Length; b++)
+				{
+					int amount = 0;
+					StringBuilder sb = new StringBuilder();
+					for (int x = 0; x < lines[a].Length; x++)
+					{
+						if (lines[a][x] != lines[b][x])
+						{
+							amount++;
+						}
+						else
+						{
+							sb.Append(lines[a][x]);
+						}
+					}
+					if (amount == 1)
+					{
+						//Console.WriteLine($"1 on line {a} and line {b}");
+						Console.WriteLine($"Rebuilt ID is {sb.ToString()}");
+					}
+				}
+			}
 		}
 	}
 }
